@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test11.html</title>
+  <style>
+    #content1 {
+      /* padding: 10px 20px 30px 40px;   위에서부터 시계방향으로 안쪽 여백 */
+      padding: 50px 20px 40px; /* 2개: 위아래 && 좌우    3개: 위, 좌, 아래, 우==좌 */
+      border: 2px solid blue;
+    }
+    #content2, #content4 {
+      width: 320px;
+      float: left;
+    }
+    #content3 {
+      width: 700px;
+      float: left;
+      padding: 20px;
+      margin: 0px 0px 20px;
+      border: 6px double brown;
+      border-radius: 50px 50px 0px 0px;  /* 왼쪽 위 모서리부터 시계 방향 */
+      background-color: bisque;
+    }
+    #content2 {
+      margin: 40px;   /* 바깥쪽 여백 */
+      padding: 10px;  /* 안쪽 여백 */
+      border: 2px solid blue;
+    }
+    #content5 {
+      clear: both; /* 정해진 값을 clear한다! */
+    }
+    #hh1 {
+      padding:50px;
+      background-color: violet;
+    }
+  </style>
+</head>
+<body>
+  <h2>폼태그와 CSS연습</h2>
+  <form>
+    <div id="content1">
+      <fieldset>
+        <legend>회 원 가 입 1</legend>
+        <p>
+          <label for="mid" class="tit">아이디</label>
+          <input type="text" name="mid" id="mid" placeholder="아이디를 입력하세요" autofocus />
+        </p>
+        <p>
+          <label for="pwd" class="tit">비밀번호</label>
+          <input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요" />
+        </p>
+        <p>
+          <input type="submit" value="전송" class="btn" />
+          <input type="reset" value="다시입력" class="btn" />
+        </p>
+      </fieldset>
+    </div>
+    <div id="content2">
+      <fieldset>
+        <legend>회 원 가 입 2</legend>
+        <p>
+          <label for="mid" class="tit">아이디</label>
+          <input type="text" name="mid" id="mid" placeholder="아이디를 입력하세요" autofocus />
+        </p>
+        <p>
+          <label for="pwd" class="tit">비밀번호</label>
+          <input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요" />
+        </p>
+        <p>
+          <input type="submit" value="전송" class="btn" />
+          <input type="reset" value="다시입력" class="btn" />
+        </p>
+      </fieldset>
+    </div>
+    <div id="content3">
+      <fieldset>
+        <legend>회 원 가 입 3</legend>
+        <p>
+          <label for="mid" class="tit">아이디</label>
+          <input type="text" name="mid" id="mid" placeholder="아이디를 입력하세요" autofocus />
+        </p>
+        <p>
+          <label for="pwd" class="tit">비밀번호</label>
+          <input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요" />
+        </p>
+        <p>
+          <input type="submit" value="전송" class="btn" />
+          <input type="reset" value="다시입력" class="btn" />
+        </p>
+      </fieldset>
+    </div>
+    <div id="content4">
+      <fieldset id="hh1">
+        <legend>회 원 가 입 4</legend>
+        <p>
+          <label for="mid" class="tit">아이디</label>
+          <input type="text" name="mid" id="mid" placeholder="아이디를 입력하세요" autofocus />
+        </p>
+        <p>
+          <label for="pwd" class="tit">비밀번호</label>
+          <input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요" />
+        </p>
+        <p>
+          <input type="submit" value="전송" class="btn" />
+          <input type="reset" value="다시입력" class="btn" />
+        </p>
+      </fieldset>
+    </div>
+    <div id="content5">
+      <fieldset>
+        <legend>회 원 가 입 5</legend>
+        <p>
+          <label for="mid" class="tit">아이디</label>
+          <input type="text" name="mid" id="mid" placeholder="아이디를 입력하세요" autofocus />
+        </p>
+        <p>
+          <label for="pwd" class="tit">비밀번호</label>
+          <input type="password" name="pwd" id="pwd" placeholder="비밀번호를 입력하세요" />
+        </p>
+        <p>
+          <input type="submit" value="전송" class="btn" />
+          <input type="reset" value="다시입력" class="btn" />
+        </p>
+      </fieldset>
+    </div>
+  </form>
+</body>
+</html>

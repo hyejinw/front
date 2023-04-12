@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test14.html</title>
+  <script>
+    'use strict';
+
+    //배열 선언 1. new Array()   , 자바: int[] mbc = new int[크기];
+    // 2.=[값1, 값2, 값3 ......];, 자바: int[] mbc = {값1, 값2, 값3 .......};
+
+    const arr1 = new Array();
+    console.log("arr1 : " + arr1);
+    console.log("typeof(arr1) : " + typeof(arr1));    //object 로 나옴
+    console.log("===========================");
+    
+    const arr2 = ['사과','배', '바나나','포도','딸기']
+    console.log("arr2 : " + arr2);
+    console.log("typeof(arr2) : " + typeof(arr2));    //object 로 나옴
+    console.log("arr2의 길이 : " + arr2.length);
+    console.log("arr2[0] : " + arr2[0]);
+    console.log("arr2[3] : " + arr2[3]);
+    console.log("arr2[arr2,length-1] : " + arr2[arr2,length-1]);
+    console.clear();
+
+    
+    for(let i=0; i<arr2.length; i++){
+      console.log("arr2["+i+"] = " + arr2[i]); 
+    }
+    console.clear();
+
+    // 향상된 for문: for(let 변수 of 객체명)            자바: for(타입 뱐수 : 객체) {}
+    let cnt = 0;    
+    for(let arr of arr2) {
+      console.log("arr2["+cnt+"] = " + arr); 
+      cnt++;
+    }
+    console.clear();
+
+    // forEach문을 이용한 반복 출력: 객체명.forEach(function(){});
+    arr2.forEach(function(){
+      console.log("값 : " + " | ");
+    });
+    console.clear();
+
+
+    arr2.forEach(function(arr){
+      console.log(arr + " | ");
+    });
+    console.clear();
+
+    
+    // forEach문을 이용한 반복 출력: 객체명.forEach(function([arr], [index], [객체명]){});
+    arr2.forEach(function(arr,i){
+      console.log(i +" : " + arr +" | ");
+    });
+
+    //forEach문 Arrow Function문으로 변경
+    arr2.forEach((arr) => {
+      console.log(arr+ " | ");
+    });
+    console.clear();
+
+    arr2.forEach((arr) => console.log(arr+ " || "));
+    console.clear();
+
+    arr2.forEach((arr,i) => console.log(i + " : " + arr+ " ||| "));
+
+  </script>
+</head>
+<body>
+  <h2>배열(Array) 연습</h2>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test7.html</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">       <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+  integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    function clac() {
+
+      // let product = "";      
+      // for(let i=0; i<document.getElementsByName("product").length; i++) {
+      //   product += document.getElementsByName("product")[i].value;
+      // }
+      // let price = "";
+      // for(let i=0; i<document.getElementsByName("price").length; i++) {
+      //   price += document.getElementsByName("price")[i].value + "<br /><hr/ >";
+      // }
+
+      let res = "";
+      for(let i=0; i<document.getElementsByName("price").length; i++) {
+        res += document.getElementsByName("product")[i].value + ": " + document.getElementsByName("price")[i].value + "<br /><hr/ >";
+        
+      }
+      demo.innerHTML = res;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <form name="myform">
+      <table class="table text-center border">
+        <h2 class="text-center">멀티 텍스트 입력 처리 연습</h2>
+      <tr>
+        <th colspan="2">상품명</th>
+        <th colspan="2">가격</th>
+      </tr>
+      <tr>
+        <td>상품1 : </td>
+        <td><input type="text" name="product" value="냉장고"/></td>
+        <td>가격1 : </td>
+        <td><input type="number" name="price" value="1"/></td><br />
+      </tr>
+      <tr>
+        <td>상품2 : </td>
+        <td><input type="text" name="product" value="오디오"/></td>
+        <td>가격2 : </td>
+        <td><input type="number" name="price" value="2"/></td><br />
+      </tr>
+      <tr>
+        <td>상품3 : </td>
+        <td><input type="text" name="product" value="TV"/></td>
+        <td>가격3 : </td>
+        <td><input type="number" name="price" value="3"/></td><br />
+      </tr>
+      <tr>
+        <td>상품4 : </td>
+        <td><input type="text" name="product" value="선풍기"/></td>
+        <td>가격4 : </td>
+        <td><input type="number" name="price" value="4"/></td><br />
+      </tr>
+      <tr>
+        <td>상품5 : </td>
+        <td><input type="text" name="product" value="세탁기"/></td>
+        <td>가격5 : </td>
+        <td><input type="number" name="price" value="5"/></td><br />
+      </tr>
+      <tr>
+        <td colspan="4"><button type="button" onclick="clac()">계산</button></td>
+      </tr>
+      </table>
+    </form>
+  </div>
+  <hr />
+  <div id="demo"></div>
+</body>
+</html>

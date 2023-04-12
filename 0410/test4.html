@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test4.html</title>
+  <style>
+    body{
+      margin: 0px;
+      font-size: 1em;     /* 16px 종횡비를 적당히 맞춰준다.// 0.5em == 8px // rem(상속의 개념: 글자크기)*/
+      background-color: #ccc !important;   /* 우선순위가 올라가기 때문에 뒤에서 수정할 때 또 !important 를 써줘야 한다. */
+    }
+    .container{
+      background-color: #ddd;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input[type="text"],input[type="number"],input[type="password"],input[type="submit"], select{
+      width: 100%;
+      margin: 20px 0px;
+      padding: 10px 0px;
+      font-size: 1em;    /*9번에 body라고 적었기 때문에 input은 따로 1em으로 설정해야 한다. 다만 별(*)로 바꾸면 모두에게 적용되니까 쓸 필요없다.*/
+    }
+    input[type="text"]:hover,input[type="number"]:hover,input[type="password"]:hover,input[type="submit"]:hover, select:hover{
+      background-color: #ccc;
+    }
+    input[type="radio"]{
+      margin: 15px 5px 30px 10px;
+    }
+    input[type="submit"]{
+      border-radius: 15px;
+      border: 1px solid #aaa;
+      background-color: beige;
+    }
+</style>
+</head>
+<body>
+  <div class="container">
+    <form name="myform">
+      <lable for="name">성명</lable>
+      <input type="text" name="name" id="name" placeholder="성명을 입력하세요" autofocus required />
+      <lable for="age">나이</lable>
+      <input type="number" name="age" id="age" />
+      <lable for="pwd">비밀번호</lable>
+      <input type="password" name="pwd" id="pwd" />
+      <label for="gender">성별</label>
+      <input type="radio" name="gender" id="gender" value="남자" checke d/>남자 &nbsp;
+      <input type="radio" name="gender" id="gender" value="여자" />여자<br />
+      <label for="job">직업</label>
+      <select name="job" id="job">
+        <option value="">직업선택</option> <!--value값을 안 적어주면 option 이름이 값으로 들어간다. -->
+        <option>학생</option>
+        <option>회사원</option>
+        <option>공무원</option>
+        <option>군인</option>
+        <option>기타</option>
+      </select>
+      <input type="submit" value="회원가입" />
+    </form>
+  </div>
+</body>
+</html>

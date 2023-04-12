@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test1.html(레이아웃 연습)</title>
+  <style>
+    body{
+      margin:0px;
+      text-align: center;
+    }
+    #container{
+      width:1000px;
+      margin: 0 auto; /* 가운데 정렬하는 법 */
+      background-color: beige;
+    }
+    nav{
+      line-height: 100px;
+      text-align: center;
+      color:white;
+    }
+    header{
+      height: 100px;
+      background-image: url("../../images/1.png");
+    }
+    #layer1,#layer2,#layer3,#layer5,#layer6{
+      width: 200px;
+      height: 250px;
+    }
+    #content1{
+      float: left;
+      width: 200px;
+    }
+    #content2{
+      float: left;
+      width: 600px;
+    }
+    #content3{
+      float: left;
+      width: 200px;
+    }
+    footer{
+      clear: both; /* 위에 지정한 float의 값을 전부 무시한다. */
+      height: 120px;
+      background-color: cadetblue;
+    }
+    #layer1{
+      background-color: rgb(0, 0, 139);
+    }
+    #layer2{
+      background-color: rgb(76, 76, 216);
+    }
+    #layer3{
+      background-color: rgb(203, 203, 229);
+    }
+    #layer5{
+      background-color: rgb(63, 63, 88);
+    }
+    #layer6{
+      background-color: rgb(117, 117, 179);
+    }
+    #layer4-1, #layer4-2, #layer4-3, #layer4-4{
+      width: 240px;
+      height: 300px;
+      margin: 10px;
+      padding: 20px;
+      float: left;
+    }
+    #layer4-1{
+      background-color: rgb(62, 62, 189);
+    }
+    #layer4-2{
+      background-color: rgb(71, 71, 92);
+      height: 350px;
+    }
+    #layer4-3{
+      background-color: rgb(187, 187, 231);
+    }
+    #layer4-4{
+      background-color: rgb(160, 160, 175);
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <header>
+      <nav>
+        <span>레이아웃연습1</span>   |
+        <span>레이아웃연습2</span>   |
+        <span>레이아웃연습3</span>   
+      </nav>
+    </header>
+    <section>
+      <div id="content1">
+        <div id="layer1">연습1</div>
+        <div id="layer2">연습2</div>
+        <div id="layer3">연습3</div>
+      </div>
+      <div id="content2">
+        <div id="layer4-1">
+          <b>공지사항</b>
+          1. 연습 4-1-1<br />
+          2. 연습 4-1-2<br />
+          3. 연습 4-1-3<br />
+          4. 연습 4-1-4<br />
+          5. 연습 4-1-5<br />
+        </div>
+        <div id="layer4-2">
+          <b>신입회원</b>
+          1. 연습 4-2-1<br />
+          2. 연습 4-2-2<br />
+          3. 연습 4-2-3<br />
+          4. 연습 4-2-4<br />
+          5. 연습 4-2-5<br />
+        </div>
+        <div id="layer4-3">
+          <b>이벤트</b>
+          1. 연습 4-3-1<br />
+          2. 연습 4-3-2<br />
+          3. 연습 4-3-3<br />
+          4. 연습 4-3-4<br />
+          5. 연습 4-3-5<br />
+        </div>
+        <div id="layer4-4">
+          <b>신제품</b>
+          1. 연습 4-4-1<br />
+          2. 연습 4-4-2<br />
+          3. 연습 4-4-3<br />
+          4. 연습 4-4-4<br />
+          5. 연습 4-4-5<br />
+        </div>
+      </div>
+      <div id="content3">
+        <div id="layer5">연습5</div>
+        <div id="layer6">연습6</div>
+      </div>
+    </section>
+    <footer>
+      Copyright : Design by KilDong Hong.
+    </footer>
+  </div>
+</body>
+
+</html>

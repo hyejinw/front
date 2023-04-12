@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>homework.html</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">       <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+  integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>             <!-- sweetalert2 cdn -->
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500&display=swap');     /* 구글 웹 폰트 */
+  </style>
+  
+  <script src="hw.js"></script>
+
+  <style>
+    body {
+      font-family: 'Noto Serif KR', serif;
+    }
+    th{
+      text-align: center;
+      background-color: #FCC8D1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form name="myform" method="post" action="#">
+      <table class="table table-responsive-md">
+      <h1 class="text-center m-4" style="background-color: #FEF2F4;">회 원 가 입   <i class="fas fa-heart"></i></h1>
+      <h6 class="text-right">별(*) 표시는 필수 입력 사항입니다.</h6>
+        <tr>
+          <th><label for="n">이름 *</label></th>
+          <td><input type="text" name="n" id="n" autofocus required /></td>
+        </tr>
+        <tr>
+          <th><label for="identity">주민등록번호 *</label></th>
+          <td>
+            <input type="number" name="identity" id="identity_1" required /> -
+            <input type="password" name="identity" id="identity_2" required />
+          </td>
+        </tr>
+        <tr>
+          <th><label for="mid">아이디 *</label></th>
+          <td><input type="text" name="mid" id="mid" required /></td>
+        </tr>
+        <tr>
+          <th><label for="pwd">비밀번호 *</label></th>
+          <td><input type="password" name="pwd" id="pwd" required /></td>
+        </tr>
+        <tr>
+          <th><label for="chk_pwd">비밀번호 확인 *</label></th>
+          <td><input type="password" name="chk_pwd" id="chk_pwd" required /></td>
+        </tr>
+        <tr>
+          <th>비밀번호 힌트</th>
+          <td>
+            <select name="hint" id="hint">
+              <option value="">선택</option>
+              <option>졸업한 초등학교 이름은></option>
+              <option>제일 친한 친구의 이름은?</option>
+              <option>아버지의 성함은?</option>
+              <option>어머니의 성함은?</option>
+              <option>가장 아끼는 물건은?</option>
+              <option>가장 좋아하는 장소는?</option>
+              <option>가장 좋아하는 음식은?</option>
+              <option>별명은?</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="finder">답변</label></th>
+          <td><input type="text" name="finder" id="finder"></td>
+        </tr>
+        <tr>
+          <th><label for="email">이메일 *</label></th>
+          <td>
+            <input type="text" name="email" id="email_1" required />@
+            <input type="text" name="email" id="email_2" />
+              <select name="email" id="email_3">
+                <option value="">직접입력</option>
+                <option>naver.com</option>
+                <option>daum.net</optionaver.com>
+                <option>gmail.com</optionaum.net>
+                <option>nate.com</optionmail.com>
+                <option>hanmail.net</optionate.com>
+              </select>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="phone">전화번호</label></th>
+          <td>
+            <input type="number" name="phone" id="phone_1" max="3"/> -
+            <input type="number" name="phone" id="phone_2" max="4"/> -
+            <input type="number" name="phone" id="phone_3" max="4"/>
+          </td>
+        </tr>
+        <tr>
+          <th><label for="cellph">핸드폰 번호 *</label></th>
+          <td>
+            <input type="number" name="cellph" id="cellph_1" required /> -
+            <input type="number" name="cellph" id="cellph_2" required /> -
+            <input type="number" name="cellph" id="cellph_3" required />
+          </td>
+        </tr>
+        <tr>
+          <th>직업</th>
+          <td>
+            <select name="job" id="job" size="5">
+              <option value="">선택</option>
+              <option>학생</option>
+              <option>언론</option>
+              <option>공무원</option>
+              <option>군인</option>
+              <option>서비스업</option>
+              <option>교육</option>
+              <option>금융/증권/보험업</option>
+              <option>유통업</option>
+              <option>의료</option>
+              <option>기타</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>메일 / SNS 정보 수신</th>
+          <td>
+            <input type="radio" name="receive" id="receive_1" value="수신" checked/>수신 &nbsp;
+            <input type="radio" name="receive" id="receive_2" value="수신 거부" />수신 거부
+          </td>
+        </tr>
+        <tr>
+          <th>관심분야</th>
+          <td>
+            <input type="radio" name="into" id="into_1" value="생두" />생두 &nbsp;
+            <input type="radio" name="into" id="into_2" value="원두" />원두 &nbsp;
+            <input type="radio" name="into" id="into_3" value="로스팅" />로스팅 &nbsp;
+            <input type="radio" name="into" id="into_4" value="핸드드립" />핸드드립 &nbsp;
+            <input type="radio" name="into" id="into_5" value="에스프레소" />에스프레소 &nbsp;
+            <input type="radio" name="into" id="into_6" value="창업" />창업 &nbsp;
+            <input type="radio" name="into" id="into_7" value="모르겠음" />모르겠음
+          </td>
+        </tr>
+        <tr>
+          <th>가입 경로 *</th>
+          <td>
+            <select name="route" id="route" size="1" required>
+              <option value="">선택</option>
+              <option>네이버 검색</option>
+              <option>다음 검색</option>
+              <option>크롬 검색</option>
+              <option>지인 소개</option>
+              <option>카페 / 동호회</option>
+              <option>기타</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>정보 공개 여부</th>
+          <td>
+            <select name="barrier" id="barrier" size="1">
+              <option value="">선택</option>
+              <option value="b_1">모두 공개</option>
+              <option value="b_2">비공개</option>
+              <option value="b_3">친구에게만 공개</option>
+              <option value="b_4">링크 통해서만 공개</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="text-center">
+            <div class="row mt-3">
+              <div class="col"></div>
+              <div class="col"><input type="button" value="값 전송" onclick="fCheck()" class="btn btn-success form-control btn-sm font-weight-bolder" /></div>
+              <div class="col"><input type="reset" value="다시 입력" class="btn btn-warning form-control btn-sm font-weight-bolder" /></div>
+              <div class="col"></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
+</body>
+</html>
+
+<!--py-md-3-->

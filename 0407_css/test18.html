@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test18.html</title>
+  <style>
+    body {
+      margin: 50px;
+      background-color: antiquewhite;
+    }
+    #box1 {
+      border: 2px solid red;
+      margin: 20px 0px;
+      padding: 50px;
+      background-image: url("../images/3.jpg");
+      text-align: right;
+      color: aliceblue;
+    }
+    #box2 {
+      width: 500px;
+      height: 200px;
+      margin: 0 auto;     /* 알아서 좌우 정렬: 중앙에 놓는다! */
+      background-color: rosybrown;
+      text-align: center;
+    }
+    #box3 {
+      background-image: url("../images/3.jpg");
+      width: 500px;
+      height: 200px;
+      margin: 0 auto;
+    }
+    #box4 {
+      width: 500px;
+      height: 200px;
+      background-color: blueviolet;
+      position: absolute;
+      left: 200px;
+      top:300px;
+    }
+    #box4-1 {    /* 여긴 문자 */
+      position: relative;
+      left: 100px;
+      top: 80px;
+    }
+    /* #box5 {
+      width: 500px;
+      height: 200px;
+      background-color: cadetblue;
+      position: fixed;
+      left: 200px;
+      top:300px;
+    } */
+    #box5 {
+      width: 500px;
+      height: 200px;
+      background-color: cadetblue;
+      position: fixed;    /* 움직인당 */
+      left: 50%;
+      top: 50%;
+    }
+    #box6 {
+      width: 300px;
+      height: 250px;
+      position: absolute;
+      left: 70%;
+      top: 70%;
+      background-color: aqua;
+    }
+</style>
+</head>
+<body>
+  <h2>포지션 연습</h2>
+  <div>
+    포지션: static, relative, absolute, fixed
+  </div>
+  <div id="box1">
+    이곳은 Box1입니다.<br />
+    <p>연습1</p>
+    <p>연습2</p>
+    <p>연습3</p>
+    <p>연습4</p>
+    <p>연습5</p>
+  </div>
+  </div>
+  <div id="box2">
+    이곳은 Box2입니다.<br />
+    <p>연습1</p>
+    <p>연습2</p>
+    <p>연습3</p>
+    <p>연습4</p>
+    <p>연습5</p>
+  </div>
+  <div id="box3">이곳은 Box3입니다.</div>
+  <div id="box4">
+    <div id="box4-1">
+      연습4
+    </div>
+  <div id="box5">
+    <div id="box5-1">
+      연습5
+    </div>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+    <p>안녕하세요</p>
+    <div id="box6">
+      이곳은 Box6입니다.
+    </div>
+  </div>
+</body>
+</html>

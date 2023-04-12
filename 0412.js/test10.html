@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test10.html</title>
+  <script>
+    'use strict';  //'변수를 사용하기 위해서는 반드시 선언해야 한다'라는 의미! == 29번 줄에 오류가 뜬다.
+
+    let su2 = 200;
+    console.log("1. typeof(su2) : " + typeof(su2));  //number
+    console.log("1. su2 : " +(su2+=100));
+    {
+      console.log("2. su2 : " +(su2+=100));
+    }
+    console.log("3. su2 : " +(su2+=100));
+    console.log();
+    
+    {
+      let su3 = 100;   // let은 전역 변수가 아니다!
+      console.log("2. su3 : " +(su3+=100)); 
+    }
+    // console.log("3. su3 : " +(su3+=100));  //여기서 오류가 뜬다!
+
+    const su4 = 100;
+    // console.log("su4 : " + (su4 +=100));   //자바의 static final 과 같이 상수로 값이 변할 수 없다.
+
+    // su5 = 500;
+    // console.log("su5 : " +(su5+=100));
+    
+  </script>
+</head>
+<body>
+  <h2>자바스크립트</h2>
+</body>
+</html>

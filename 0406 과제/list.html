@@ -1,0 +1,91 @@
+<html>
+<head>
+  <title>설문지</title>
+</head>
+<body>
+  <br /><h2 align="center" >군 포 시 민 대 상 설 문</h2><hr />
+  <form name="myform">
+    <h5 align="center">별(*) 표시 = 필수 입력 사항</h5>
+    <table border="1px">
+      <tr>
+        <td align="center" bgcolor="efb730"><label for="mid">성명* </label></td>
+        <td><input type="text" name="mid" maxlength="6" required autofocus /></td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="efb730"><label for="age">나이* </label></td>
+        <td><input type="text" name="age" maxlength="3" required /></td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="efb730"><label for="gender">성별* </label></td>
+        <td><input type="radio" name="gender" value="남" required checked />남자
+            <input type="radio" name="gender" value="여" required />여자
+            <input type="radio" name="gender" value="무" required />미공개</td>            
+      </tr>
+      <tr>
+        <td align="center" bgcolor="efb730">취미 </td>
+        <td><input type="checkbox" name="hobby" value="등산" checked />등산
+            <input type="checkbox" name="hobby" value="낚시" />낚시
+            <input type="checkbox" name="hobby" value="바둑" />바둑
+            <input type="checkbox" name="hobby" value="독서" />독서
+            <input type="checkbox" name="hobby" value="TV 시청" />TV 시청
+            <input type="checkbox" name="hobby" value="운동" />운동
+            <input type="checkbox" name="hobby" value="기타" />기타</td>            
+      </tr>
+      <tr>
+        <td align="center" bgcolor="efb730">주로 이용하는 교통수단*</td>
+        <td><select name="transfortation" required>
+          <option>도보</option>
+          <option>버스</option>
+          <option>승용차</option>
+          <option>기차</option>
+          <option>지하철</option>
+          <option>택시</option></select>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="efb730"><label for="time">교통수단 주별 이용시간</label></td>
+        <td><input type="text" name="time" maxlength="5" /></td>
+      </tr>
+      <tr>
+        <td align="center" bgcolor="efb730">여가생활을 위해 주로 방문하는 곳(중복 가능)*</td>
+        <td><select name="place" required multiple>
+          <option>영화관</option>
+          <option>미술관</option>
+          <option>반월호수공원</option>
+          <option>철쭉동산</option>
+          <option>수리산</option>
+          <option>누리 천문대</option>
+          <option>안양천</option></select>
+        </td>
+    </tr>
+      <td align="center" bgcolor="efb730"><label for="priority">군포시에 거주하는 것에 대한 만족도*</label></td>
+      <td><input type="radio" name="priority" value="매우 만족" required />매우 만족
+          <input type="radio" name="priority" value="만족" required />만족
+          <input type="radio" name="priority" value="보통" required />보통
+          <input type="radio" name="priority" value="대체로 불만" required />대체로 불만
+          <input type="radio" name="priority" value="매우 불만" required />매우 불만</td>            
+    </tr>
+    </tr>
+      <td align="center" bgcolor="efb730"><label for="change">군포시가 지난 2년동안 가장 발전을 한 분야*</label></td>
+      <td><input type="radio" name="change" value="도시안전분야" required />도시안전분야
+          <input type="radio" name="change" value="청소년/교육분야" required />청소년/교육분야
+          <input type="radio" name="change" value="문화예술분야" required />문화예술분야
+          <input type="radio" name="change" value="복지분야" required />복지분야
+          <input type="radio" name="change" value="일자리/취업분야" required />일자리/취업분야
+          <input type="radio" name="change" value="잘 모르겠음" required />잘 모르겠음
+          <input type="radio" name="change" value="없음" required />없음</td>            
+    </tr>
+      <tr>
+        <td align="center" bgcolor="efb730">군포 시에 남기고 싶은 말</td>
+        <td><textarea rows="5" cols="50" name="content"></textarea></td>
+      </tr>      
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="제출" />
+          <input type="reset" value="다시입력" />
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

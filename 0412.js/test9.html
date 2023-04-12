@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test9.html</title>
+  <script>
+    su1 = 100;
+    console.log("su1 : " +su1);
+    console.log("typeof(su1) : " + typeof(su1));  //number
+
+    su1 = 100;
+    console.log("su1 : " +su1);
+    console.log("typeof(su1) : " + typeof(su1));  //number
+    
+    su1 = "서울";
+    console.log("su1 : " +su1);
+    console.log("typeof(su1) : " + typeof(su1));  //string
+
+    su1 = '서울';
+    console.log("su1 : " +su1);
+    console.log("typeof(su1) : " + typeof(su1));  //string
+    
+    var su2 = 200;
+    console.log("1. typeof(su2) : " + typeof(su2));  //number
+    console.log("1. su2 : " +(su2+=100));
+    {
+      console.log("2. su2 : " +(su2+=100));
+    }
+    console.log("3. su2 : " +(su2+=100));
+    console.log();
+
+    
+    {
+      var su3 = 100;   // ecma에서 사용하지 않도록 권장! 왜? 어디서든 쓸 수 있는 전역 변수가 되기 때문이다.
+      console.log("2. su3 : " +(su3+=100)); 
+    }
+    console.log("3. su3 : " +(su3+=100));  // 여기까지 누적된다!
+
+    
+
+
+  </script>
+</head>
+<body>
+  <h2>자바스크립트</h2>
+</body>
+</html>

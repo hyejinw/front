@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test12.html</title>
+  <style>
+    div {
+      background-color: burlywood;
+      width: 300px;    /* 블록 구조 안에서만 width 가 된다 */
+    }
+    span {             /* 인라인 구조 안에서만 width가 된다 ==> 이걸 블로구조로 만든 게 인라인 블록이다! */
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+<body>
+  <h2>블록 구조 연습</h2>
+  <div>
+    안녕하세요<br />
+    반갑습니다
+  </div>
+  <hr />
+  <span>
+    2.안녕하세요<br />
+    2.모두 반갑습니다
+  </span>
+  <hr />
+</body>
+</html>

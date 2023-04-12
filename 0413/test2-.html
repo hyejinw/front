@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">       <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+  integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    'use strict';
+
+    function gugudan() {
+      let dan = document.getElementById("dan").value.trim();
+      if(dan == '') {
+        alert("단을 입력하세요");
+        return false;     // else를 쓰지 않았다면 return은 꼭 적어주자
+      }
+
+      let str = '', res;
+      for(let i=1; i<=10; i++) {
+        res = dan + "*" + i + "=" + (dan * i) + "<br />";      // 이 부분 다시 보자!
+        str += res;
+      }
+      demo.innerHTML += "<b>" + str +"</b>";
+    }
+
+    // 화면 초기화
+    function clearCheck() {
+      // document.getElementById("dan").value = 1;
+      // demo.innerText = '';
+      location.reload();     // 새로고침
+    }
+  </script>
+</head>
+<body>
+  <p><br /></p>
+  <div class="container">
+    <h2>구구단 연습</h2>
+    <p>출력할 '단'을 입력하세요</p>
+    <p>
+      단 : <input type="number" name="dan" id="dan" value="1" autofocus />&nbsp;
+      <input type="button" value="구구단 연습" onclick="gugudan()" class="btn btn-success" />
+      <input type="button" value="다시 입력" onclick="clearCheck()" class="btn btn-warning" />
+    </p>
+    <hr />
+    <div id="demo"></div>
+  </div>
+  <p><br /></p>
+</body>
+</html>

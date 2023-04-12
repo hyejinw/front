@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test3과제.html</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">       <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" 
+  integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    'use strict';
+
+    function gugudan() {
+      let start = document.getElementById("start").value.trim();
+      let end = document.getElementById("end").value.trim();
+      let cnt = document.getElementById("cnt").value.trim();
+
+      // 입력 유무 확인
+      if(start == '') {
+        alert("시작단을 입력하세요");
+        return false;        // else를 쓰지 않았다면 return은 꼭 적어주자
+      }
+      else if(end == '') {
+        alert("끝단을 입력하세요");
+        return false;
+      }
+      else if(cnt == '') {
+        alert("한 행 횟수를 입력하세요");
+        return false;  
+      }
+
+      // 시작단과 끝단 비교
+      if(start > end) {
+        let change;
+        change = end;
+        end = start;
+        start = change;
+      }
+
+      // 출력
+      let str = "<table class='table table-hover'><tr>", n=0;
+
+      for(let i=start; i<=end; i++){
+        n++;
+        if(n % cnt == 0){
+          str +="<th>"+i+"단</th></tr>";
+        }
+        else {
+          str +="<th>"+i+"단</th>";
+        }
+        str += "<td>";
+
+        for(let j=1; j<=9; j++){
+          str += i + " * " + j + " = " + (i * j) + "<br />";    
+        }
+
+        if(n % cnt == 0) str += "</td></tr>";
+        else str += "</td>";
+      }
+      str+="</table>";
+      demo.innerHTML += "<b>" + str +"</b>";
+    }
+
+    // 화면 초기화
+    function clearCheck() {
+      location.reload();     // 새로고침
+    }
+  </script>
+
+  <style>
+    th{
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <p><br /></p>
+
+  <div class="container">
+    <table class="table">
+      <tr>
+        <td colspan="2" class="text-center text-success"><h2>구구단 연습</h2></td>
+      </tr>
+      <tr>
+        <td colspan="2">출력할 '시작 단과 끝 단'을 입력하세요</td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <h4>조건</h4><br />
+            1. 입력된 시작단이 끝단보다 크면 두 수를 비교해서 작은단부터 출력<br />
+            2. 출력되는 단은 세로 방향이 아닌 가로방향으로 출력 (한 행에 출력할 횟수를 입력처리)
+        </td>
+      </tr>
+      <tr>
+        <th>시작단 : </th>
+        <td><input type="number" name="start" id="start" value="1" autofocus class="ml-5"/></td>
+      </tr>
+      <tr>
+        <th>끝단 : </th>
+        <td><input type="number" name="end" id="end" value="9" class="ml-5"/></td>
+      </tr>
+      <tr>
+        <th>한 행처리 횟수 : </th>
+        <td><input type="number" name="cnt" id="cnt" value="1" class="ml-5"/></td>
+      </tr>
+      <tr>
+        <td colspan="2" class="text-center">
+          <input type="button" value="구구단 연습" onclick="gugudan()" class="btn btn-success mr-5" />
+          <input type="button" value="다시 입력" onclick="clearCheck()" class="btn btn-warning ml-5" />
+        </td>
+      </tr>
+    </table>
+  </div>
+  <p><br /></p>
+  <td><div id="demo"></div></td>
+</body>
+</html>
