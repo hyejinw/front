@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function ddd() {
+      let pwd = document.getElementById("pwd").value;
+      // if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]{4,10}/.test(pwd)){
+      // if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])(?=.*[가-힣]){4,10}/.test(pwd)){
+      if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^가-힣\w\s])[A-Za-z\d!]{4,10}/.test(pwd)){
+        alert("비밀번호는 최소 4 자 및 최대 10 자, 대문자 하나 이상, 소문자 하나, 숫자 하나 및 특수 문자 하나 이상.");
+        return false;
+      }
+      alert("통과");
+    }
+  </script>
+</head>
+<body>
+  <input type="text" name="pwd" id="pwd" />
+  <input type="button" value="ddd" onclick="ddd()"/>
+</body>
+</html>

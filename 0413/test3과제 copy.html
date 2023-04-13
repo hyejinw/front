@@ -15,16 +15,16 @@
     'use strict';
 
     function gugudan() {
-      let start = document.getElementById("start").value.trim();
-      let end = document.getElementById("end").value.trim();
+      let startD = document.getElementById("start").value.trim();
+      let endD = document.getElementById("end").value.trim();
       let cnt = document.getElementById("cnt").value.trim();
 
       // 입력 유무 확인
-      if(start == '') {
+      if(startD == '') {
         alert("시작단을 입력하세요");
         return false;        // else를 쓰지 않았다면 return은 꼭 적어주자
       }
-      else if(end == '') {
+      else if(endD == '') {
         alert("끝단을 입력하세요");
         return false;
       }
@@ -33,13 +33,9 @@
         return false;  
       }
 
-      // 시작단과 끝단 비교
-      if(start > end) {
-        let change;
-        change = end;
-        end = start;
-        start = change;
-      }
+      // 시작단과 끝단 비교 : from다희!! 이게 더 좋은 방법같당
+      let start = Math.min(startD,endD);
+      let end = Math.max(startD,endD);
 
       // 출력
       let str = "<table class='table table-hover'><tr>", res, n=0;

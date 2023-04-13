@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test9_2.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    'use strict';
+
+    function fCheck() {
+      alert("환영합니다!");
+    }
+
+    function newWindow() {
+      let w = document.getElementById("w").value.trim();
+      let h= document.getElementById("h").value.trim();
+      
+      if(w < 300) w = 300;
+      if(h < 200) h = 200;
+      
+      if(w == "") {
+        w = screen.width * (3/2);
+      }
+      if(h == "") {
+        h = screen.height * (2/3);
+      }
+      let x = (screen.width/2) - (w/2);
+      let y = (screen.height/2) - (h/2);
+      
+      let url = "test9_child.html";
+      let winName = "winName";
+      let opt = "width= "+w+", height= "+h+" , left="+x+", top="+y;
+      window.open(url, winName, opt);   
+
+
+    }
+
+    function clear() {
+
+    }
+
+  </script>
+</head>
+<body>
+  <div class="container text-center">
+    <h2>새창 띄우기(window.open())</h2>
+    <hr />
+    <pre> 
+      텍스트 박스에 새로 띄워줄 윈도우의 가로크기와 세로크기를 입력받는다.
+      새 윈도우는 화면 중앙에 띄울 수 있게 한다.
+      만약 새 윈도우의 폭이 300px이내면, 최소 300px로 /높이가 200px이내면, 최소 200px로 처리
+      윈도우의 가로크기만 입력하였을 경우는 세로크기는 윈도우의 2/3크기로, 윈도우의 세로크기만 입력하였을 경우는 가로크기는 윈도우의 3/2크기로 한다.                   
+    </pre>
+    <div>
+      <p>
+        가로 크기 : 
+        <input type="number" name="w" id="w" autofocus />
+      </p>
+      <p>
+        세로 크기 : 
+        <input type="number" name="h" id="h"/>
+      </p>
+      <p >
+        <input type="button" value="새 창 띄우기" onclick="newWindow()" class="btn btn-success"/>
+        <input type="reset" value="다시 입력" onclick="clear()" class="btn btn-warning" />
+      </p>
+    </div>
+  </div>
+</body>
+</html>

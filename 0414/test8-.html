@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test8.html</title>
+  <script>
+    'use strict';
+
+    function fCheck() {
+      alert("환영합니다!");
+    }
+    function deviceCheck() {
+      let str ='';
+      str += '화면 해상도 가로 크기: ' + window.screen.width + "px<br />";
+      str += '화면 해상도 세로 크기: ' + window.screen.height + "px<br />";
+      str += '사용자 작업 영역의 가로 크기: ' + window.screen.availWidth + "px<br />";
+      str += '사용자 작업 영역의 세로 크기: ' + window.screen.availHeight + "px<br />";
+      
+      str += '표현 가능 색상 수:  ' + Marh.pow(2, screen.colorDepth) + "<br />"
+      str += '픽셀 당 표현 가능 색상 수:  ' + Marh.pow(2, screen.colorDepth) + "<br />"
+
+    
+      
+      
+      
+      demo.innerHTML = str;
+    }
+
+  </script>
+</head>
+<body>
+  <h2>윈도우 정보보기(screen 객체)</h2>
+  <input type="button" value="해상도 확인" onclick="deviceCheck()" />
+  <hr />
+  <div id="demo"></div>
+</body>
+</html>

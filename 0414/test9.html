@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test7.html</title>
+  <script>
+    'use strict';
+
+    function fCheck() {
+      alert("환영합니다!");
+    }
+    function newWindow() {
+      let url = "test9_child.html";
+      let winName = "winName"; // 생략가능!  장점: 간편, 단점(많음): 같은 창에 계속 뜰 수 있는 장점을 못 쓴다.
+      let winWidth = 600;
+      let winHeight = 400;
+      let x = (screen.width/2) - (winWidth/2);
+      let y = (screen.height/2) - (winHeight/2);
+      let opt = "width= "+winWidth+", height= "+winHeight+" , left="+x+", top="+y;
+      window.open(url, winName, opt);   
+
+
+    }
+
+  </script>
+</head>
+<body>
+  <h2>새창 띄우기(window.open())</h2>
+  <input type="button" value="새창 띄우기" onclick="newWindow()" />
+</body>
+</html>
