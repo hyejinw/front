@@ -11,9 +11,9 @@ let text2 =' ABC       BDEF GHIABC JKLMNO  PQR  ABC       BDEF GHI JKLMNO  PQR  
 // demo.innerHTML = text2.replace('ABC', 'OPQ');
 // demo.innerHTML = text2.toLowerCase();
 // demo.innerHTML = text2.concat('안녕');   ABC BDEF GHIABC JKLMNO PQR ABC BDEF GHI JKLMNO PQR안녕
-// demo.innerHTML = text2.concat('안녕', 1234); 
+// demo.innerHTML = text2.concat('안녕', 1234);  안녕과 1234를 넣겠다!
 // demo.innerHTML = concat('안녕', 1234);        // 오류다!!! 이렇게 쓰는 건 안 된당
-// demo.innerHTML = text2.trim() + 'abc';        
+// demo.innerHTML = text2.trim() + 'abc';        공백을 없애고 abc를 넣겠다.
 // demo.innerHTML = 'abc'+ text2.trimEnd() + 'abc';        
 // demo.innerHTML = 'abc'+ text2.replaceAll(' ','') + 'abc';        
 // demo.innerHTML = text1.charAt(5);        
@@ -46,7 +46,6 @@ kbs.forEach((tel, i) => {
 // demo.innerHTML = text1.match('ABC');
 // demo.innerHTML = text1.match('A BC');
 demo.innerHTML = text1.includes('ABC');
-
 
 let price = 100; // 가격
 let vat = 0.25;    //부가세

@@ -53,12 +53,12 @@
         }
         n++;
 
-        if(n % cnt == 0) str += "</td></tr>";
+        if(n % cnt == 0) str += "</td></tr><tr>";
         else str += "</td>";
       }
-      str+="</table>";
+      str+="</tr></table>";
       console.log(str);
-      demo.innerHTML += "<b>" + str +"</b>";
+      demo.innerHTML = "<b>" + str +"</b>";
     }
 
     // 화면 초기화

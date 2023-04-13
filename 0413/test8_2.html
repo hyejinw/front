@@ -33,14 +33,14 @@
       }
       // 0123456789
       // abcdefghi/
-      hobby = hobby.substring(0,hobby.length-1);
+      hobby = hobby.substring(0,hobby.length-1);    // 마지막 슬래시(/) 지우기!!
       hobby = hobby + ' <input type="button" value="지우기" onclick="fClear()"/>';
       demo.innerHTML = hobby;
     }
 
     function fClear() {
       for(let i=0; i<hobbyCnt; i++) {
-        document.getElementsByName("hobby")[i].ckecked = false;
+        document.getElementsByName("hobby")[i].checked = false;
       }
       demo.innerText = '';
     }

@@ -2,7 +2,7 @@
 
 
 //오늘 날짜를 전역변수로 선언
-const today = new Date();  // calendar, date
+const today = new Date();  // 자바: calendar, date
 const year = today.getFullYear();  // 연도 4자리
 const month = today.getMonth()+1;    // 월(0~11): 기존 월보다 -1 되어서 출력
 const date = today.getDate();      // 일
@@ -27,7 +27,7 @@ function fCheck2() {
 
 //편집 날짜(요일) 출력
 function fCheck3() {
-  let str = today.getDay();      //  자바 스크립트. 자바: 일(0) | 데이터 베이스: 일(1) 
+  let str = today.getDay();      //  자바 스크립트, 자바: 일(0) | 데이터 베이스: 일(1) 
   let week = ['일','월','화','수','목','금','토'];
 
   demo.innerHTML = week[str] + '요일';
@@ -36,7 +36,7 @@ function fCheck3() {
 //그 달의 마지막 날짜 출력
 function fCheck4() {
 
-  let mon = prompt("마지막 날짜를 출력할 년과 월을 입력하세요.(yyyy-mm)");
+  let mon = prompt("마지막 날짜를 출력할 년과 월을 입력하세요.(yyyy-mm)");   // 창에 직접 띄워 입력값을 받아온다.
   let temp = mon.split("-");
   let yy = temp[0];   //연도
   let mm = temp[1];   //월

@@ -42,7 +42,7 @@ function fCheck4() {
   // strDate += (str.getMonth() + 1) + '-';
   // strDate += str.getDate();
 
-  let strDate = "해달월의 마지막 일자? " + yy + "-" + mm + "-" + str.getDate();
+  let strDate = "해당 월의 마지막 일자? " + yy + "-" + mm + "-" + str.getDate();
 
   demo.innerHTML = strDate;
 }

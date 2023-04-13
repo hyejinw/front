@@ -26,7 +26,7 @@ function fCheck2() {
   const endDate = new Date(end); 
   let temp;
 
-  if(isSameDay(startDate, endDate)) temp = "같다";    // 이 부분 다시!!
+  if(isSameDay(startDate, endDate)) temp = "같다";    // 이 부분 다시!! : 자주 쓰이는 만큼 미리 함수를 만들어서 호출해 쓰는 게 좋다.
   else temp = "다르다";
 
   demo.innerHTML = "비교한 날짜는 " + temp;

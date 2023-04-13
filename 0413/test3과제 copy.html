@@ -42,27 +42,22 @@
       }
 
       // 출력
-      let str = "<table class='table table-hover'><tr>", n=0;
+      let str = "<table class='table table-hover'><tr>", res, n=0;
 
       for(let i=start; i<=end; i++){
-        n++;
-        if(n % cnt == 0){
-          str +="<th>"+i+"단</th></tr>";
-        }
-        else {
-          str +="<th>"+i+"단</th>";
-        }
-        str += "<td>";
+        str +="<td>"+i+"단<br />";
 
         for(let j=1; j<=9; j++){
           str += i + " * " + j + " = " + (i * j) + "<br />";    
         }
+        n++;
 
-        if(n % cnt == 0) str += "</td></tr>";
+        if(n % cnt == 0) str += "</td></tr><tr>";
         else str += "</td>";
       }
-      str+="</table>";
-      demo.innerHTML += "<b>" + str +"</b>";
+      str+="</tr></table>";
+      console.log(str);
+      demo.innerHTML = "<b>" + str +"</b>";
     }
 
     // 화면 초기화
