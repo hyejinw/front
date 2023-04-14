@@ -12,8 +12,11 @@ function wholeCheck() {
   let identity = document.getElementById("identity").value.trim();
 
   // const regex1 = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[~!@#$%^&*()_+<>?]){4,20}/; 
-  const regex1 = /(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[~!@#$%^&*()_+,./<>?}{[]\]){4,20}/; 
+  // const regex1 = /(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[~!@#$%^&*()_+,./<>?}{[]\]){4,20}/; 
   // const regex1 = /[0-9a-zA-Z\!\@\#\$\%\^\&\*\(\)\_\+\,\.\?\<\>\[\]\{\}]{4,7}$/g; 
+  
+  const regex1 = /(?=.*[a-zA-Z])(?=.*[0-9])(?=.*?[~!@#$%^&*()_+,\.?><\[\]{}]){4,20}/;
+  
 
   const regex2 = /[가-힣]+/g;  // 한글만 적어도 1자이상
   const regex3 = /[A-Za-z가-힣]+/g;  // 한글,영문만 적어도 1자이상
@@ -25,7 +28,9 @@ function wholeCheck() {
   notifi = "";
   
   // 비밀번호 확인
-  if(!regex1.test(pwd)) notifi += "입력하신 비밀번호는 사용하실 수 없습니다.<br/>";
+  if(!regex1.test(pwd)) {
+    notifi += "입력하신 비밀번호는 사용하실 수 없습니다.<br/>";
+   }
   
   // 닉네임 확인
   else if(!regex2.test(nick)) notifi += "입력하신 닉네임은 사용하실 수 없습니다.<br/>";
