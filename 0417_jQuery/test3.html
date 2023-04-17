@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test3.html</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- 만약 9번 라인에서 오류가 뜨면 13번 주석을 풀어줘야 한다!! -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> --> 
+  <script>
+    'use strict';
+
+    // jQuery 기본 문법 (test1번의 onload와 같은 의미다.)
+    // jQuery(document).ready(function() {  php에선 객체를 부를 때 $를 쓰기 때문에 jQuery로 쓴다.
+    // jQuery => $ 
+    // 사용법: $("selector").이벤트(function() {});    selector 종류: 태그, 아이디, 클래스
+    $(document).ready(function() {
+      // 여기다 적어주면 loading되었을 때부터 demo의 값이 변경된 상태가 된다.
+      // $("#demo").css("color","red");   // 앞이 속성, 뒤가 값
+      // $("#demo").css("fontSize","25pt"); 
+        
+      $("#demo").css({'color':'red', 'fontSize': '25pt'});
+
+        $("#calcBtn").click(()=> {   // jQuery안에 jQuery 또 사용 가능
+          // let product = document.getElementById("product").value;
+          let product = $("#product").val();
+          let price = $("#price").val();
+          let su = $("#su").val();
+
+          if(isNaN(price) || isNaN(su)) {
+            alert("숫자만 입력하세요.");
+            $("#price").select();
+            $("#price").focus();
+            return;
+          }
+          let res = price * su;
+          demo.innerHTML = product + "의 가격: " + res;
+        });   
+    });
+  </script>
+</head>
+<body>
+<p><br/></p>
+<div class="container">
+  <h2 class="mb-3">상품가격 계산하기</h2>
+  <form name="myform">
+    <div>
+      상품명 :
+      <input type="text" name="product" id="product" value="냉장고" autofocus class="mb-3 form-control" />
+    </div>
+    <div>
+      상품 가격 :
+      <input type="text" name="price" id="price" value="0" class="mb-3 form-control" />
+    </div>
+    <div>
+      수량 :
+      <input type="text" name="su" id="su" value="0" class="mb-3 form-control" />
+    </div>
+    <div>       <!-- onclick="cal()" 대신 id로!! -->
+      <input type="button" value="계산하기" id="calcBtn" class="btn btn-success mt-2 form-control" />
+    </div>
+  </form>
+  <hr />
+  <!-- <font size="5" color="red"><div id="demo"></div></font> -->
+  <div id="demo"></div>
+</div>
+</body>
+</html>

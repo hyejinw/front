@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0417_Knotted.html</title>
+  <link rel="stylesheet" type="text/css" href="0417_Knotted.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> 
+  <script src="https://kit.fontawesome.com/fa3667321f.js" crossorigin="anonymous"></script> -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Noto+Sans+KR&display=swap');
+
+    /* Make the image fully responsive */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script>
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="knotted-main">
+      <button class="w3-button w3-xlarge knotted-menu" onclick="w3_open()">☰</button>
+      <div class="logo"><a href="0417_Knotted.html"><img src="../images/knotted_logo.png" style="width: 90px; height: 50px;"/></a></div>
+      <div id="nav">
+        <a href="#"><b>RESERVATION</b></a>
+        <a href="#"><b>MENU</b></a>
+        <a href="#"><b>LOCATION</b></a>
+        <a href="#"><b>BRAND</b></a>
+      </div>
+      <div id="member">
+        <a href="#">CART</a>
+        <a href="#">MY PAGE</a>
+        <a href="#">LOGIN</a>
+      </div>
+
+  <!-- Sidebar -->
+  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+    <a href="#" style="padding-left: 10px;"><b class="menu">RESERVATION</b></a><br />
+    <a href="#" style="padding-left: 10px;"><b class="menu">MENU</b></a><br />
+    <a href="#" style="padding-left: 10px;"><b class="menu">LOCATION</b></a><br />
+    <a href="#" style="padding-left: 10px;"><b class="menu">BRAND</b></a><br /><br />
+    <a href="#" style="padding-left: 10px;"><b class="menu">LOGIN</b><br />
+    <a href="#" style="padding-left: 10px;"><b class="menu">MY PAGE</b><br />
+    <a href="#" style="padding-left: 10px;"><b class="menu">CART</b><br />
+  </div>
+
+  </header>
+
+  <div id="section">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="#"><img src="https://img-app.knotted-order.com/app/banners/71/71" alt="Los Angeles" width="1100" height="500"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="#"><img src="https://img-app.knotted-order.com/app/banners/47/47" alt="Chicago" width="1100" height="500"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="#"><img src="https://img-app.knotted-order.com/app/banners/73/73" alt="New York" width="1100" height="500"></a>
+        </div>
+      </div>      
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+    <section>
+      <div id="mainlist">
+        <div id="left">
+          <h1>OUR BEST MENU</h1>
+          <h3>Milk Cream Dount</h3>
+          <a href="#">우유 생크림 도넛</a>
+          <p>3,900</p>
+        </div>
+        <div id="right">
+          <ul id="slidelist">
+            <li><a href="#"><img src="https://img-app.knotted-order.com/products/4/4?1680578597" class="img"/></a></li>
+            <li><a href="#"><img src="https://img-app.knotted-order.com/products/5/5?1680578607" class="img"/></a></li>
+            <li><a href="#"><img src="https://img-app.knotted-order.com/products/6/6?1680578640" class="img"/></a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="event">
+        <div class="inner">
+          <h1>EVENT</h1>
+          <ul>
+            <li><a href="#"><img src="../images/20230417_203232.png" class="img2"/></a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="insta">
+        <div class="inner">
+          <h1>INSTAGRAM</h1>
+          <ul id="ww">
+            <li><a href="#"><img src="https://img-app.knotted-order.com/instagrams/17984167462942447" class="img3" /></a></li>
+            <li><a href="#"><img src="https://img-app.knotted-order.com/instagrams/18258742723121225" class="img3" /></a></li>
+            <li><a href="#"><img src="https://img-app.knotted-order.com/instagrams/18001730059636001" class="img3" /></a></li>
+            <li><a href="#"><img src="https://img-app.knotted-order.com/instagrams/18274670851119634" class="img3" /></a></li>
+            <li><a href="#"><img src="https://img-app.knotted-order.com/instagrams/17975742904963749" class="img3" /></a></li>
+            <li><a href="#"><img src="https://img-app.knotted-order.com/instagrams/17949954848372632" class="img3" /></a></li>
+            <li><a href="#"><img src="https://img-app.knotted-order.com/instagrams/17989225315867384" class="img3" /></a></li>
+            <li><a href="#"><img src="https://img-app.knotted-order.com/instagrams/17971453247284016" class="img3" /></a></li>
+            <li><a href="#"><img src="https://img-app.knotted-order.com/instagrams/17845502108950082" class="img3" /></a></li>
+            <li><a href="#"><img src="https://img-app.knotted-order.com/instagrams/17998715176606469" class="img3" /></a></li>
+            <li><a href="#"><img src="https://img-app.knotted-order.com/instagrams/17977321552897351" class="img3" /></a></li>
+            <li><a href="#"><img src="https://img-app.knotted-order.com/instagrams/17867090885865079" class="img3" /></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <strong><hr /></strong>
+      <div class="inner">
+        <ul id="f_board">
+          <li><a href="#">1:1문의</a></li>
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">자주묻는질문</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">위치기반서비스이용약관</a></li>
+        </ul>
+        <ul id="f_info">
+          <li>회사명 : 노티드(주식회사 지에프에프지)</li>
+          <li>대표이사명 : 이준범</li>
+          <li>사업자등록번호 : 248-81-00620</li>
+          <li>통신판매업신고번호 : 2020-서울강남-02297</li>
+          <li>주소 : 서울특별시 강남구 도산대로51길 16</li>
+        </ul>
+        <p id="rights">Copyright ⓒ 2021 Knotted. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

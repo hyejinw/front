@@ -1,0 +1,435 @@
+/*공통*/
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif, 'Lato';
+  font-size: 1em;
+  background-color: rgba(253, 250, 247, 0.8);
+}
+
+ul li, #nav a, #member a, .menu{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+ul li a, #left a {
+  color: #282828;
+}
+
+ul li a:hover, #nav a:hover, #member a:hover, .menu:hover  {
+  color: #ffa0c5;
+  text-decoration: none;
+}
+
+img:hover {
+  opacity: 50%;
+}
+
+/* PC 설정 */
+.knotted-menu {
+  display: none;
+}
+
+.knotted-main {
+  position: fixed;
+  left: 0px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.logo {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  margin: 0px 150px 0px 0px;
+}
+
+#nav {
+  position: absolute;
+  left: 160px;
+  top: 18px;
+  width: 570px;
+  height: 42px;
+}
+
+#nav a{
+  float: left;
+  margin: 0px 60px 0px 0px;
+}
+
+#member {
+  float: right;
+  height: 42px;
+  padding: 0px 5px 10px;
+  margin: 20px 200px 0px 500px;
+}
+#member a{
+  margin: 0px 20px;
+}
+
+.menu a{
+  padding: 15px;
+  background-color: #ffa0c5;
+}
+
+#section {
+  padding: 60px 0px 0px;
+}
+
+#mainlist {
+  width: 100%;
+  height: 300px;
+  margin: 70px 0px 100px;
+}
+
+#left {
+  float: left;
+  width: 400px;
+  height: 300px;
+  margin: 0px 35px 0px 60px;
+}
+
+#left h1 {
+  font-size: 1.1em;
+  color: #ffa0c5;
+  margin: 0px 0px 15px;
+  font-weight: bold;
+}
+
+#left h3 {
+  font-size: 3em;
+  margin: 0px 0px 3px;
+  font-family: 'Lato';
+}
+
+#left a {
+  width: 250px;
+  height: 45px;
+  font-size: 2.3em;
+  font-family: sans-serif;
+}
+
+#left p {
+  width: 400px;
+  height: 36px;
+  font-size: 2em;
+  color: #c3c3c3;
+}
+
+#slidelist {
+  float: right;
+  width: 65%;
+  height: 300px;
+  margin: 0px 35px 0px 30px;
+}
+
+#slidelist li {
+  float: right;
+  width: 300px;
+  height: 300px;
+  margin: 0px 30px 0px 0px;
+}
+.img {
+  width: 300px;
+  height: 300px;
+}
+
+#event {
+  background-color: #eee;
+  padding: 60px 0px;
+}
+
+#event .inner {
+  width: 90%;
+  height: 500px;
+  margin: 0px auto;
+  padding: 30px 0px;
+}
+
+.inner h1 {
+  text-align: center;
+  font-size: 1.3em;
+  color: #ffa0c5;
+  margin: 0px 0px 40px;
+  font-weight: bold;
+}
+
+.img2 {
+  float: left;
+  width: 442px;
+  height: 331px;
+}
+
+#insta {
+  padding: 60px 0px;
+}
+
+#insta .inner {
+  width: 90%;
+  height: 530px;
+  margin: 0px auto;
+}
+
+.img3 {
+  float: left;
+  width: 223.5px;
+  height: 223.5px;
+  margin: 5px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+footer {
+  width: 100%;
+  height: 126px;
+  margin: 100px 0px 100px;
+  padding: 20px 0px 30px;
+}
+
+footer .inner {
+  width: 80%;
+  height: 75px;
+  margin: 0px auto;
+}
+
+#f_board, #f_info {
+  width: 80%;
+  height: 20px;
+  margin: 0px 0px 10px;
+}
+
+#f_board li a {
+  float: left;
+  font-size: 0.8em;
+  margin: 3px 8px;
+}
+
+#f_info li {
+  float: left;
+  font-size: 0.8em;
+  margin: 3px 8px;
+  color:#ffa0c5;
+}
+
+#rights {
+  clear: both;
+  font-size: 0.8em;
+  padding: 20px 8px 100px;
+  color:#ffa0c5;
+}
+
+/* 태블릿 모드1(1120px ~ 1610px) */
+@media screen and (min-width:1120px) and (max-width:1610px) {
+
+  #mainlist {
+    width: 100%;
+    height: 150px;
+    margin: 50px 0px 120px;
+  }
+  
+  #left {
+    float: left;
+    width: 350px;
+    height: 150px;
+    margin: 0px 20px 0px 50px;
+  }
+  #left h1 {
+    font-size: 0.8em;
+    margin: 0px 0px 10px;
+  }
+  #left h3 {
+    font-size: 2em;
+  }
+  #left a {
+    width: 150px;
+    height: 30px;
+    font-size: 1.5em;
+    font-family: sans-serif;
+  }
+  #left p {
+    width: 300px;
+    height: 20px;
+    font-size: 1em;
+  }  
+  #slidelist {
+    float: right;
+    width: 60%;
+    height: 150px;
+    margin: 0px 10px 0px;
+  }
+  #slidelist li {
+    float: right;
+    width: 200px;
+    height: 150px;
+    margin: 0px 10px 0px;
+  }
+  .img {
+    width: 150px;
+    height: 150px;
+  }
+  #insta .inner {
+    width: 90%;
+    height: 700px;
+    margin: 0px auto;
+  }
+}
+
+/* 태블릿 모드2(600px ~ 1119px) */
+@media screen and (min-width:600px) and (max-width:1119px) {
+  .logo, #nav, #member {
+    display: none;
+  }
+  #mainlist {
+    width: 100%;
+    height: 100px;
+    margin: 30px 0px 80px;
+  }
+  
+  #left {
+    float: left;
+    width: 200px;
+    height: 100px;
+    margin: 0px 10px 0px 25px;
+  }
+  #left h1 {
+    font-size: 0.3em;
+    margin: 0px 0px 3px;
+  }
+  #left h3 {
+    font-size: 1em;
+  }
+  #left a {
+    width: 80px;
+    height: 20px;
+    font-size: 0.8em;
+  }
+  #left p {
+    width: 150px;
+    height: 10px;
+    font-size: 0.5em;
+  }  
+  #slidelist {
+    float: right;
+    width: 50%;
+    height: 80px;
+    margin: 0px 5px 0px;
+  }
+  #slidelist li {
+    float: right;
+    width: 90px;
+    height: 90px;
+    margin: 0px 5px 0px;
+  }
+  .img {
+    width: 80px;
+    height: 80px;
+  }
+  #insta .inner {
+    margin: 0px auto;
+    width: 90%;
+    height: 700px;
+  }
+  .img3 {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+  }
+}
+/* 모바일 모드(~ 599px) */
+@media screen and (max-width:599px) {
+  .logo, #nav, #member {
+    display: none;
+  }
+  #mainlist {
+    width: 100%;
+    height: 100px;
+    margin: 5px 0px 50px;
+  }
+  #left {
+    float: left;
+    width: 70px;
+    height: 100px;
+    margin: 0px 10px 0px 10px;
+  }
+  #left h1 {
+    font-size: 0.1em;
+    margin: 0px 0px 3px;
+  }
+  #left h3 {
+    font-size: 1em;
+  }
+  #left a {
+    width: 40px;
+    height: 20px;
+    font-size: 0.4em;
+  }
+  #left p {
+    width: 75px;
+    height: 10px;
+    font-size: 0.25em;
+  }  
+  #slidelist {
+    float: right;
+    width: 30%;
+    height: 80px;
+    margin: 0px 2px 0px;
+  }
+  #slidelist li {
+    float: right;
+    width: 45px;
+    height: 45px;
+    margin: 0px 3px 0px;
+  }
+  .img {
+    width: 40px;
+    height: 40px;
+  }
+  #event .inner {
+    height: 400px;
+    margin: 0px auto;
+    padding: 30px 0px;
+  }
+  .img2 {
+    width: 200px;
+    height: 150px;
+  }
+  #insta .inner {
+    margin: 0px auto;
+    width: 90%;
+    height: 500px;
+  }
+  .img3 {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin: 2px;
+  }
+  
+  footer {
+    width: 100%;
+    height: 126px;
+    margin: 10px 0px 100px;
+    padding: 20px 0px 30px;
+  }
+  #f_board li a {
+    float: left;
+    font-size: 0.3em;
+    margin: 3px 8px;
+  }
+  
+  #f_info li {
+    float: left;
+    font-size: 0.3em;
+    margin: 3px 8px;
+    color:#ffa0c5;
+  }
+  
+  #rights {
+    clear: both;
+    font-size: 0.3em;
+    padding: 20px 8px 100px;
+    color:#ffa0c5;
+  }
+}
