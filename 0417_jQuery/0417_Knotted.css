@@ -176,7 +176,7 @@ img:hover {
   width: 223.5px;
   height: 223.5px;
   margin: 5px;
-  text-align: center;
+  text-align: center;  /* 이걸 위로? */
   border-radius: 10px;
 }
 
